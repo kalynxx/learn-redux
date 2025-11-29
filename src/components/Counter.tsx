@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { decrement, incrementAsync } from "../state/counter/counterSlice";
 
 const Counter = () => {
+  // - "useSelector" can fetch a specific "slice" (or part) of a given state or its content
+  // - "useDispatch" is used to send reducer functions to the redux store. 
+  //   It needs the generic of type AppDispatch to handle async reducers.
   const count = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch<AppDispatch>();
 
