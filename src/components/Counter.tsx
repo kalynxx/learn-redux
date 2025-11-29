@@ -8,21 +8,27 @@ const Counter = () => {
 
   return (
     <>
-      <h2>{count}</h2>
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
+          flexDirection: "row",
           alignItems: "center",
+          justifyContent: "center",
         }}
       >
         <button
           style={{ margin: ".5rem" }}
           onClick={() => dispatch(incrementAsync(10))}
         >
-          incr
+          increment!
         </button>
-        <button onClick={() => dispatch(decrement())}>dec</button>
+        <h2 style={{ margin: "1rem" }}>{count}</h2>
+        <button
+          style={{ margin: ".5rem" }}
+          onClick={() => dispatch(decrement())}
+        >
+          Decrement!
+        </button>
       </div>
     </>
   );
